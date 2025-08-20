@@ -19,25 +19,24 @@ public:
 };
 
 int main() {
-    Book livro1 = {"O Senhor dos Aneis", "J.R.R. Tolkien", 1954};
-    Book livro2 = {"1984", "George Orwell", 1949};
-    Book livro3 = {"Dom Casmurro", "Machado de Assis", 1899};
+    Book obj1 = {"O Senhor dos Aneis", "J.R.R. Tolkien", 1954};
+    Book obj2 = {"1984", "George Orwell", 1949};
 
-    User usuario1 = {"João", "Rua A, 123", 20, {livro1, livro2}};
-    User usuario2 = {"Maria", "Av. Central, 456", 25, {livro3}};
+    User usuario1 = {"João", "Rua A, 123", 20, {obj1}};
+    User usuario2 = {"Maria", "Av. Central, 456", 25, {obj2}};
 
     cout << "Usuario 1: " << usuario1.nome << ", " << usuario1.endereco 
          << ", " << usuario1.idade << " anos" << endl;
-    for (Book b : usuario1.livros_alugados) {
-        cout << "  Livro: " << b.title << " - " << b.author 
-             << " (" << b.year << ")" << endl;
+    for (Book c : usuario1.livros_alugados) {
+        cout << "  Livro: " << c.title << " - " << c.author 
+             << " (" << c.year << ")" << endl;
     }
 
     cout << "\nUsuario 2: " << usuario2.nome << ", " << usuario2.endereco 
          << ", " << usuario2.idade << " anos" << endl;
-    for (Book b : usuario2.livros_alugados) {
-        cout << "  Livro: " << b.title << " - " << b.author 
-             << " (" << b.year << ")" << endl;
+    for (Book c : usuario2.livros_alugados) {
+        cout << "  Livro: " << c.title << " - " << c.author 
+             << " (" << c.year << ")" << endl;
     }
 
     return 0;
